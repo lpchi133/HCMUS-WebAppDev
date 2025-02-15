@@ -1,5 +1,21 @@
 # HCMUS-WebAppDev
 
+## Table of Contents
+
+- [Description](#description)
+- [Features](#features)
+  - [Main System](#main-system)
+  - [Auxiliary System (Payment Management)](#auxiliary-system-payment-management)
+  - [Connecting the Management and Payment Systems](#connecting-the-management-and-payment-systems)
+- [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
+- [Setup and Running the Project](#setup-and-running-the-project)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the Application](#running-the-application)
+- [Usage](#usage)
+  - [Interfaces](#interfaces)
+
 ## Description
 
 HCMUS-WebAppDev is a web application developed for the Web Application Development course. It consists of two systems: the **Main System** (a management application) and the **Auxiliary System** (Payment Management). The project follows the **MVC architecture**, integrates **AJAX** for dynamic updates, and uses **Express.js** for server-side operations. It implements **authentication and role-based authorization** for security.
@@ -100,7 +116,22 @@ HCMUS-WebAppDev/
    npm install
    ```
 
-3. Set up the database:
+3. Set up environment variables:
+   Create a `.env` file and configure the following variables:
+
+   ```env
+   GOOGLE_CLIENT_ID=your_google_client_id
+   GOOGLE_CLIENT_SECRET=your_google_client_secret
+   GOOGLE_CALLBACK_URL=your_google_callback_url
+   URL_GG=https://accounts.google.com/o/oauth2/v2/auth
+   HOST=127.0.0.1
+   MAIN_PORT=3000
+   AUX_PORT=1234
+   AS_DATABASE=your_database_connection_string_for_auxiliary_system  MS_DATABASE=your_database_connection_string_for_main_system
+   JWT_ACCESS_KEY=your_jwt_secret
+   ```
+
+4. Set up the database:
    - Ensure MongoDB is running.
    - Configure the database connection in the configuration files.
 
